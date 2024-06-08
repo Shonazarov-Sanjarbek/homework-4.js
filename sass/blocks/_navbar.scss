@@ -1,0 +1,102 @@
+.header{
+    width: 100%;
+    background: $bg-py;
+    position: sticky;
+    top: 0;
+}
+.navbar{
+    width: 100%;
+    height: 80px;
+    @include df(space-between, center);
+    &__logo{
+        width: 8%;
+        height: 70%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__collection{
+        @include df();
+        gap: 30px;
+    }
+    &__item{
+        @include df();
+        gap: 10px;
+        a{
+            span{
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 24px;
+                color: $bg-light;
+            }
+        }
+    }
+    &__btn{
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 18px;
+        transition: .5s;
+        &:hover{
+            cursor: pointer;
+        }
+        &:active{
+            transform: scale(.7);
+        }
+    }
+}
+.fa-comment, .fa-user{
+    color: $bg-light;
+}
+
+
+@media (max-width: 770px){
+    .navbar__logo{
+        width: 8%;
+        height: 50%;
+    }
+    .navbar__collection{
+        display: none;
+    }
+    .navbar__btn{
+        padding: 8px 16px;
+    }
+}
+@media (max-width: 600px){
+    .navbar__logo{
+        width: 8%;
+        height: 40%;
+    }
+    .navbar__collection{
+        display: none;
+    }
+    .navbar__btn{
+        padding: 6px 12px;
+    }
+}
+@media (max-width: 450px){
+    .navbar__logo{
+        width: 10%;
+        height: 35%;
+    }
+    .navbar__collection{
+        display: none;
+    }
+    .navbar__btn{
+        padding: 6px 10px;
+    }
+}
+@media (max-width: 370px){
+    .navbar__logo{
+        width: 10%;
+        height: 30%;
+    }
+    .navbar__collection{
+        display: none;
+    }
+    .navbar__btn{
+        padding: 6px 10px;
+    }
+}
